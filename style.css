@@ -1,0 +1,748 @@
+@charset "UTF-8";
+/*
+Theme Name: Redy
+Theme URI: http://jumpthemes.com/
+Author: Andre Revin
+Author URI: http://revin.ru/
+Description: Redy is a responsive WordPress theme with a focus on minimal design and typography for a blogs and portfolios websites. Redy has valid html and no bloated code. We built it on the most modern Bootstrap 4 framework. Redy Theme has a clean and professional design and has been featured on Behance.
+
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: redy
+Tags: one-column, blog, translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+
+*/
+/*  Table of content
+    
+     0. Header
+     1. Footer entry
+     2. Post navigation
+     3. Comment area
+        3.1 Comment meta
+        3.2 Comment form
+
+     4. Entry date
+     5. Sidebar
+        5.1 Search
+
+     6. Menu
+     7. Table
+     8. Image responsive
+     9. Blog
+    10. Typography  
+    11. Links
+    12. Sidebar
+    13. Additional
+    
+*/
+/* 0. Header */
+.site-title {
+  margin-bottom: .3rem; }
+
+#main header {
+  width: 100%;
+  padding-top: 2rem; }
+
+.small {
+  font-size: 0.875rem;
+  line-height: 1.6; }
+
+.entry-meta {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.4);
+  margin-top: 2rem;
+  margin-bottom: .5rem; }
+
+/* 1. Footer entry. Category, tags and comment links.  */
+.entry-footer {
+  display: flex;
+  padding-bottom: 1rem;
+  webkit-box-pack: start !important;
+  -webkit-justify-content: flex-start !important;
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
+  flex-wrap: wrap !important; }
+
+.cat-links {
+  display: block;
+  width: 50%;
+  padding-right: 15px;
+  color: rgba(0, 0, 0, 0.3); }
+
+.tags-links {
+  display: block;
+  width: 50%;
+  color: rgba(0, 0, 0, 0.3); }
+
+.comments-link {
+  display: block;
+  width: 50%; }
+
+.edit-link {
+  display: block;
+  width: 50%;
+  color: rgba(0, 0, 0, 0.3); }
+
+span.screen-reader-text {
+  display: none; }
+
+span.screen-reader-text:before {
+  width: 50%;
+  content: " — ";
+  color: rgba(0, 0, 0, 0.3); }
+
+/* 2. Post navigation.  */
+.post-navigation {
+  position: relative;
+  width: 100%;
+  padding-top: 2.5rem;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+h2.screen-reader-text {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center; }
+
+.nav-links {
+  padding-bottom: 1rem;
+  display: flex;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.nav-previous {
+  padding-right: 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
+.nav-next {
+  padding-left: 15px;
+  text-align: right;
+  flex: 0 0 50%;
+  max-width: 50%; }
+
+/* 3. Comments */
+.comments-area {
+  position: relative;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.comments-title {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+@media (min-width: 576px) {
+  .comments-title {
+    font-size: 1.75rem;
+    line-height: 1.3; } }
+
+ol.comment-list {
+  padding-left: 0; }
+
+li.comment {
+  list-style-type: none; }
+
+.comment-body {
+  margin-bottom: 2rem; }
+
+/* 3.1 Comment meta footer */
+.avatar {
+  float: left;
+  margin-right: .8rem;
+  border-radius: 50%; }
+
+.says {
+  display: none;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.25); }
+
+.comment-metadata {
+  width: 100%; }
+
+.comment-awaiting-moderation {
+  width: 100%;
+  margin-bottom: 0;
+  padding: .5rem 1rem;
+  font-size: .8rem;
+  text-align: center;
+  color: #D0B260;
+  background-color: rgba(255, 197, 40, 0.15);
+  border-radius: 3px; }
+
+time {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: .875rem; }
+
+/* 3.2 Comment form */
+.comment-respond {
+  padding-top: 2rem; }
+
+.comment-reply-title {
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+
+.comment-notes {
+  font-size: 1rem;
+  color: #333; }
+
+input {
+  width: 100%;
+  display: block;
+  padding: .25rem .75rem;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px; }
+
+@media (min-width: 576px) {
+  input {
+    width: 50%; } }
+
+label {
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.4); }
+
+/* Buttons */
+.submit {
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 118, 225, 0.9);
+  border: 1px solid rgba(0, 118, 225, 0.9); }
+
+@media (min-width: 576px) {
+  .submit {
+    width: 50%; } }
+
+.submit:hover {
+  box-shadow: 0 5px 40px 0 rgba(0, 118, 225, 0.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: .25rem .75rem;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px; }
+
+/* 4. Entry date */
+time.updated {
+  display: none; }
+
+/* 5. Sidebar */
+/*  5.1 Search */
+.search-submit {
+  display: none; }
+
+input.search-field {
+  width: 100%;
+  display: block;
+  padding: .25rem .75rem;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px; }
+
+@media (min-width: 576px) {
+  input.search-field {
+    max-width: 100%; } }
+
+/* 6.0 Menu Dropdown */
+.header-border-1 {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1); }
+
+/* Mobile */
+.navbar-toggler {
+  line-height: inherit; }
+
+.menu-item-has-children {
+  position: relative; }
+
+#menu-wrap ul li {
+  float: left;
+  position: relative;
+  list-style: none;
+  margin-right: .5rem;
+  padding: .5rem;
+  background-color: beige; }
+
+/*
+++++++++++++++++++++++++
+This menu works good on desktop and not on mobile
+++++++++++++++++++++++++
+*/
+#primary_nav_wrap ul {
+  list-style: none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0; }
+
+#primary_nav_wrap ul a {
+  display: block;
+  text-decoration: none;
+  padding: 0 .5rem; }
+
+#primary_nav_wrap ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0; }
+
+#primary_nav_wrap ul li.current-menu-item {
+  border-radius: 2px;
+  background: rgba(0, 118, 225, 0.1); }
+
+#primary_nav_wrap ul ul li:hover {
+  background: #f6f6f6; }
+
+#primary_nav_wrap ul ul {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1); }
+
+#primary_nav_wrap ul ul li {
+  float: none;
+  min-width: 15rem; }
+
+#primary_nav_wrap ul ul a {
+  padding: 0 .5rem; }
+
+#primary_nav_wrap ul ul ul {
+  top: 0;
+  left: 100%; }
+
+#primary_nav_wrap ul li:hover > ul {
+  display: block; }
+
+/* 7.0 Table */
+table {
+  margin-bottom: 2rem; }
+
+td,
+th {
+  padding: 1rem .5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* Blockquote */
+blockquote {
+  padding: 0 2rem 0 2rem;
+  margin: 2rem 0 2rem 0;
+  color: #666;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* Post sticky */
+i.sticky:before {
+  content: "\f4b3";
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* 8.0 Image responsive */
+@media (min-width: 576px) {
+  figure,
+  img {
+    max-width: 576px;
+    height: auto; } }
+
+figure,
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* 9. Blog */
+/* Tag main like a row on Bootstrap */
+main.site-main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+
+@media (min-width: 576px) {
+  main.site-main {
+    margin-right: -15px;
+    margin-left: -15px; } }
+
+@media (min-width: 768px) {
+  main.site-main {
+    margin-right: -15px;
+    margin-left: -15px; } }
+
+@media (min-width: 992px) {
+  main.site-main {
+    margin-right: -15px;
+    margin-left: -15px; } }
+
+@media (min-width: 1200px) {
+  main.site-main {
+    margin-right: -15px;
+    margin-left: -15px; } }
+
+/* Tag article like a col-6 in Bootstrap */
+#main article.post {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+@media (min-width: 576px) {
+  #main article.post {
+    flex: 0 0 50%;
+    max-width: 50%; } }
+
+#main img.wp-post-image {
+  width: 100%; }
+
+/* For a page */
+#main article.page {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+/* For a single post set width for typography and hide featured image */
+#main-single-post img.wp-post-image {
+  display: none; }
+
+#main-single-post p {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post h1 {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post h1 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post h2 {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post h2 {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post h3 {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post h3 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post h4 {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post h4 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post h5 {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post h5 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post h6 {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post h6 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post .reply {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post .reply {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; } }
+
+#main-single-post ul {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post ul {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post ol {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post ol {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post .entry-meta {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post .entry-meta {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#main-single-post .entry-footer {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #main-single-post .entry-footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75%; } }
+
+#comments div.comment-content p {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #comments div.comment-content p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; } }
+
+#comments ol.children {
+  width: 100%; }
+
+@media (min-width: 800px) {
+  #comments ol.children {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; } }
+
+/* End Typography Settings */
+ol.comment-list {
+  width: 100%;
+  max-width: 100%; }
+
+#main-single-post article.post {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+/* 10. Typography */
+h1.page-title {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 100%;
+  max-width: 100%; }
+
+p {
+  font-size: 1.25rem;
+  line-height: 2rem; }
+
+.blockquote {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #666;
+  border: none;
+  margin: 1em; }
+
+.blockquote:after {
+  margin-right: auto;
+  margin-left: auto;
+  background: #eee;
+  content: '';
+  display: block;
+  height: 1px;
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+  width: 60px; }
+
+.blockquote:before {
+  margin-right: auto;
+  margin-left: auto;
+  background: #eee;
+  content: '';
+  display: block;
+  height: 1px;
+  margin-bottom: 1.5em;
+  margin-top: .5em;
+  width: 60px; }
+
+h1, .h1 {
+  font-size: 1.8rem; }
+
+@media (min-width: 576px) {
+  h1, .h1 {
+    font-size: 2.8rem; } }
+
+h1:after {
+  border-bottom: 5px solid #111;
+  content: '';
+  display: block;
+  height: 20px;
+  margin-bottom: 1rem;
+  width: 40px; }
+
+/* 11. Links */
+a {
+  color: #0076FF;
+  text-decoration: none;
+  border-bottom: 1px solid transparent; }
+
+a:visited {
+  color: rgba(0, 118, 225, 0.9); }
+
+a:focus, a:hover {
+  color: rgba(0, 118, 225, 0.9);
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+/* 12. Sidebar */
+/* Widget title H2 & list */
+.widget-area {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
+.widget-title {
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 1rem; }
+
+.widget-title:after {
+  border-bottom: 1px solid #eee;
+  content: '';
+  display: block;
+  height: 10px; }
+
+.sidebar {
+  list-style-type: none;
+  padding-left: 0; }
+
+.list-item {
+  margin-bottom: 1em; }
+
+.list-item:after {
+  border-bottom: 1px solid #eee;
+  content: '';
+  display: block;
+  height: 20px; }
+
+.widget {
+  margin-bottom: 1em; }
+
+.widget_search {
+  padding-bottom: 1rem; }
+
+/* 13. Additional */
+.wp-caption {
+  height: auto; }
+
+.wp-caption-text {
+  padding-top: .5rem;
+  color: rgba(0, 0, 0, 0.5); }
+
+.gallery-caption {
+  padding-top: .5rem; }
+
+li.bypostauthor:before {
+  position: relative;
+  top: 24px;
+  margin-left: 95%;
+  padding-left: 10px;
+  content: "\f4b3";
+  display: block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+img.alignright {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+img.alignleft {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignright {
+  float: right; }
+
+.alignleft {
+  float: left; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=style.css.map */

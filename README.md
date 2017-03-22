@@ -1,0 +1,2 @@
+# redy
+Redy WordPress Theme

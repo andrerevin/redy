@@ -16,6 +16,11 @@
 	<footer id="colophon" class="site-footer container-fluid">
 		<div class="site-info">
             <p class="small">
+                
+                
+                <div class="footer-desc"><?php echo nl2br(get_theme_mod('footer_text')); ?></div>
+                
+                
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'redy' ) ); ?>"><?php printf( esc_html__( '%s', 'redy' ), 'WordPress' ); ?></a>
                 
 			<span class="sep"> | </span>

@@ -15,18 +15,18 @@
 <hr>
 	<footer id="colophon" class="site-footer container-fluid">
 		<div class="site-info">
-            <p class="small">
                 
+            
+            <?php if(get_theme_mod('footer_text') != '') : ?>
+                <div class="footer-desc">
+                    <?php echo nl2br(get_theme_mod('footer_text')); ?>
+                </div>
+            <?php else : ?>
+                <div class="footer-desc">Redy Theme <em>by</em> <a href="https://jumpthemes.com/">Jump Themes</a></div>
+            <?php endif; ?>
+            <!-- Custom Footer-->
                 
-                <div class="footer-desc"><?php echo nl2br(get_theme_mod('footer_text')); ?></div>
-                
-                
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'redy' ) ); ?>"><?php printf( esc_html__( '%s', 'redy' ), 'WordPress' ); ?></a>
-                
-			<span class="sep"> | </span>
-                
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'redy' ), 'Redy', '<a href="https://jumpthemes.com/">Jump Themes</a>' ); ?>
-                </p>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

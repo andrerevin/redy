@@ -19,8 +19,7 @@
 
     <!-- Bootstrap 4 Start -->
     <link type="text/css" href="<?php echo get_template_directory_uri() ?>/css/bootstrap.min.css" rel="stylesheet">
-    <link type="text/css" href="<?php echo get_template_directory_uri() ?>/css/bootstrap-grid.min.css" rel="stylesheet">
-    <link type="text/css" href="<?php echo get_template_directory_uri() ?>/css/bootstrap-reboot.min.css" rel="stylesheet">
+    
     <!-- Bootstrap 4 End -->  
     
     <link type="text/css" href="<?php echo get_template_directory_uri() ?>/style.css" rel="stylesheet">

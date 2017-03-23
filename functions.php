@@ -166,3 +166,39 @@ $example_update_checker = new ThemeUpdateChecker(
 	'redy',                                    //Theme folder name, AKA "slug". 
 	'http://jumpthemes.com/download/info.json' //URL of the metadata file.
 );
+
+/**
+* Footer
+*/
+function dco_customize_register($wp_customize) {
+    //FOOTER
+    $wp_customize->add_section('footer', array(
+        'title' => 'Footer',
+        'priority' => 1,
+    ));
+
+    //footer text
+    $setting_name = 'footer_text';
+    $wp_customize->add_setting($setting_name, array(
+        'default' => 'Redy',
+        'sanitize_callback' => 'sanitize_textarea_field',
+        'transport' => 'postMessage'
+    ));
+
+    $wp_customize->add_control($setting_name, array(
+        'section' => 'footer',
+        'type' => 'textarea',
+        'label' => 'Footer text',
+    ));
+    
+    $wp_customize->selective_refresh->add_partial($setting_name, array(
+        'selector' => '.footer-desc',
+        'render_callback' => function() use ($setting_name) {
+            return nl2br(get_theme_mod($setting_name));
+        }
+    ));
+    
+}
+    add_action( 'customize_register', 'dco_customize_register' );
+
+?>

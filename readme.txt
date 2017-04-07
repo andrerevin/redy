@@ -31,6 +31,10 @@ Redy includes support for Infinite Scroll in Jetpack.
 = 1.0 - Mars 17 2017 =
 * Initial release
 
+= 1.0.6 - April 07 2017 =
+* Full width template page
+* Improved Typography
+
 == Credits ==
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

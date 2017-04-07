@@ -6,7 +6,7 @@ Author: Andre Revin
 Author URI: http://revin.ru/
 Description: Redy is a responsive WordPress theme with a focus on minimal design and typography for a blogs and portfolios websites. Redy has valid html and no bloated code. We built it on the most modern Bootstrap 4 framework. Redy Theme has a clean and professional design and has been featured on Behance.
 
-Version: 1.0.7
+Version: 1.0.8
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: redy
@@ -48,8 +48,9 @@ Tags: one-column, blog, translation-ready, custom-background, theme-options, cus
   margin-top: 2rem;
   margin-bottom: 1.5rem; }
 
-#main .entry-header {
-  margin-top: 2rem; }
+#main h1.entry-title {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem; }
 
 #main header {
   width: 100%; }
@@ -58,9 +59,10 @@ Tags: one-column, blog, translation-ready, custom-background, theme-options, cus
   font-size: 0.875rem;
   line-height: 1.6; }
 
-.entry-meta {
+#main .entry-meta {
   font-size: 0.875rem;
   color: rgba(0, 0, 0, 0.4);
+  margin-top: 1rem;
   margin-bottom: .5rem; }
 
 /* 1. Footer entry. Category, tags and comment links.  */
@@ -380,28 +382,6 @@ img {
 
 /* 9. Blog */
 /* Tag main like a row on Bootstrap */
-main.site-main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
-
-@media (min-width: 576px) {
-  main.site-main {
-    margin-right: -15px;
-    margin-left: -15px; } }
-@media (min-width: 768px) {
-  main.site-main {
-    margin-right: -15px;
-    margin-left: -15px; } }
-@media (min-width: 992px) {
-  main.site-main {
-    margin-right: -15px;
-    margin-left: -15px; } }
-@media (min-width: 1200px) {
-  main.site-main {
-    margin-right: -15px;
-    margin-left: -15px; } }
 /* Tag article like a col-6 in Bootstrap */
 #main article.post {
   position: relative;

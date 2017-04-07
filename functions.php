@@ -164,7 +164,7 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 require 'theme-updates/theme-update-checker.php';
 $example_update_checker = new ThemeUpdateChecker(
 	'redy',                                    //Theme folder name, AKA "slug". 
-	'http://jumpthemes.com/download/info.json' //URL of the metadata file.
+	'https://jumpthemes.com/download/info.json' //URL of the metadata file.
 );
 
 /**
